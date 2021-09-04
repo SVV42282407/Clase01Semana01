@@ -37,5 +37,15 @@ const traducir = (data, text, idiomaDestino) => {
     return false;
 }
 
-console.log(traducir(dataList, 'Bienvenue dans le cours React Native chez PachaQtec', 'Italiano'));
+const traducir2 = (data, text, idiomaDestino) => {
+    var r = data.some(i => i.texto.includes(text));
+    if(r){
+        var idioma = data.find(i => i.idioma === idiomaDestino);
+        return idioma.texto;
+    } else {
+        return false;
+    }
+}
+
+console.log(traducir2(dataList, 'Bienvenue dans le cours React Native chez PachaQtec', 'Italiano'));
 
