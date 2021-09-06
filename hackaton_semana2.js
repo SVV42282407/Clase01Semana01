@@ -108,8 +108,7 @@ function Calculator(){
     }
 
    this.addMethod = function(str, operation){
-        var arr = str.split(' ');
-        this.operations[arr[1]] = operation;
+        this.operations[str] = operation;
     }
 
 }
@@ -117,12 +116,12 @@ function Calculator(){
 let calc = new Calculator;
 console.log( calc.calculate("3 + 7") ); // 10
 
-/*let powerCalc = new Calculator;
+let powerCalc = new Calculator;
 powerCalc.addMethod("*", (a, b) => a * b);
 powerCalc.addMethod("/", (a, b) => a / b);
 powerCalc.addMethod("**", (a, b) => a ** b);
 let result = powerCalc.calculate("2 ** 3");
-console.log( result ); // 8*/
+console.log( result ); // 8
 
 //Ejercicio 8 (No hay 7)
 let login = 'Director';
