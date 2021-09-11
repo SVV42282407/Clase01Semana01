@@ -86,6 +86,8 @@ function makeCounter(){
 }
 
 //Ejercicio 7
+//const number = prompt('Ingresa un número');
+//getNumber(number);
 
 function getNumber(number){
     switch(number){
@@ -96,6 +98,8 @@ function getNumber(number){
             break;
     }
 }
+
+
 
 //Ejercicio 8
 let list = {
