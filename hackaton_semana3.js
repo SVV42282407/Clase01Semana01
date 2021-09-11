@@ -119,7 +119,6 @@ function iterate(obj, stack) {
                 iterate(obj[property], stack + '.' + property);
             } else {
                 console.log(property + "   " + obj[property]);
-                //$('#output').append($("<div/>").text(stack + '.' + property))
             }
         }
     }
