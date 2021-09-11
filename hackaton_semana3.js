@@ -81,9 +81,33 @@ const ask = (question, yes, no) =>{
 
 //Ejercicio 6
 
-function makeCounter(){
-
+function makeCounter() { 
+    let count = 0 ;
+    function counter(){ 
+        return counter.count++; 
+    }; 
+    function set(value){
+        counter.count = value;
+    };
+    function decrease(){
+        return counter.count--;
+    };
+    counter.set = set;
+    counter.decrease = decrease;
+    makeCounter.counter = counter;
+    counter.count = 0; 
+    return counter; 
 }
+
+let counter = makeCounter();
+console.log('Ejercicio 6:');
+console.log(counter());
+console.log(counter());
+counter.set(5);
+console.log(counter());
+console.log(counter());
+console.log(counter.decrease());
+console.log(counter.decrease());
 
 //Ejercicio 7
 //const number = prompt('Ingresa un número');
