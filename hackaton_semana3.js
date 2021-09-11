@@ -94,7 +94,6 @@ function makeCounter() {
     };
     counter.set = set;
     counter.decrease = decrease;
-    makeCounter.counter = counter;
     counter.count = 0; 
     return counter; 
 }
