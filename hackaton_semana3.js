@@ -107,6 +107,7 @@ console.log(counter());
 console.log(counter());
 console.log(counter.decrease());
 console.log(counter.decrease());
+console.log(counter.decrease());
 
 //Ejercicio 7
 //const number = prompt('Ingresa un número');
@@ -139,16 +140,20 @@ let list = {
     }
 };
 
+var listElements = [];
+
 function iterate(obj, stack) {
     for (var property in obj) {
         if (obj.hasOwnProperty(property)) {
             if (typeof obj[property] == "object") {
                 iterate(obj[property], stack + '.' + property);
             } else {
-                console.log(property + "   " + obj[property]);
+                //console.log(property + "   " + obj[property]);
+                listElements.push(obj[property]);
             }
         }
     }
+    return listElements;
 }
 
-iterate(list, '');
+console.log(iterate(list, ''));
