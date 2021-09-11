@@ -43,6 +43,7 @@ console.log(map);
 
 var i = 3;
 while (i) { console.log( i-- );}
+//El valor i-- es el valor de i antes del decremento, por tanto mostrará 3.
 
 //Ejercicio 4
 
@@ -52,7 +53,7 @@ while (++i < 5) console.log( i );
 var i = 0;
 while (i++ < 5) console.log( i );
 
-//No consolean los mismos valores por la posición del acumulador como prefijo en el caso 1 y sufijo en el caso 2
+//No consolean los mismos valores por la posición del acumulador como prefijo en el caso 1 y sufijo en el caso 2. El valor i++ es el valor de i antes del incremento. El valor ++i es el valor de i después del incremento.
 
 //Ejercicio 5
 
