@@ -124,8 +124,33 @@ new Promise(function(resolve, reject) {
     
 //Ejercicio 7
 
-function  printNumbers (from, to){
+function printNumbers (from, to){
     console.log(from);
-
+    let counter = from;
+    setTimeout(()=>{
+        if (counter === to) {
+            return;
+        } else {
+            counter = counter + 1;
+            printNumbers(counter, to);
+        }
+    }, 1000);
 }
-    
+
+printNumbers(1, 5);
+
+function printNumbersInterval(from, to) {
+    let counter = from;
+  
+    let timerId = setInterval(function() {
+      console.log(counter);
+      if (counter == to) {
+        clearInterval(timerId);
+      }
+      counter = counter + 1;
+    }, 1000);
+  }
+
+  printNumbersInterval(10, 20);
+
+
