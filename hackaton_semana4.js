@@ -100,5 +100,17 @@ async function demoGithubUserAsync(){
 }
 
 //Ejercicio 5
+async function wait() {
+    await new Promise(resolve => setTimeout(resolve, 1000)); 
+    return 10;
+}
 
+function f() {
+    // ... ¿qué deberías escribir aquí? // necesitamos llamar async wait () y esperar para 
+    //obtener 10 // recuerda, no podemos usar "await"
+
+    //Respuesta: Recordemos que una función declarada como async sigue siendo una promesa, por lo tanto podemos usar then catch finally según sea necesario
+    return wait().then(res => console.log(res));
+}
+    
     
