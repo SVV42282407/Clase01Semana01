@@ -112,5 +112,20 @@ function f() {
     //Respuesta: Recordemos que una función declarada como async sigue siendo una promesa, por lo tanto podemos usar then catch finally según sea necesario
     return wait().then(res => console.log(res));
 }
+
+//Ejercicio 6
+
+new Promise(function(resolve, reject) {
+    setTimeout(() => {
+    throw new Error("Whoops!");
+    }, 1000);
+    }).catch(alert);
+ //Respuesta: Los errores que se lancen dentro de funciones asíncronas actuarán como errores no capturados, por lo tanto catch mostarará el error Whoops!
     
+//Ejercicio 7
+
+function  printNumbers (from, to){
+    console.log(from);
+
+}
     
