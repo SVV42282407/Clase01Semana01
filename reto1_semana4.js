@@ -13,7 +13,7 @@ const kayoMakesCake = healthStatus => {
 
 let promise = kayoMakesCake('healthly')
     .then(cake => console.log(cake))
-    .catch(nocake => console.log(nocake))
+    .catch(nocake => console.log(nocake.message))
 
 promise = kayoMakesCake('not healthly')
     .then(cake => console.log(cake))
